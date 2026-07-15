@@ -11,10 +11,13 @@ Every creative decision serves the click-through.
   portal's material library (that IS your authorization). Claude's job: pick the
   paywall-adjacent cliffhanger, re-cut hook-first, add captions/subtitles, add CTA.
   No AI video generation cost. Never re-upload full episodes or rip from the app.
-- **Mode B — AI original teaser (our pipeline's edge):** Seedance-generated
+- **Mode B — AI original teaser (our pipeline's edge):** AI-generated
   anime/漫剧-style teaser dramatizing the drama's premise (AI 漫剧 is the
   fastest-growing segment). Check the portal's rules allow original promo
   material; label AI content per platform (TikTok AI label etc.).
+- **Platform routing (2026):** TikTok → Mode B only (re-cut 搬运 clips get
+  suppressed — TikTok now competes via Minis/PineDrama; original AI teasers
+  ride the AI漫剧 wave). FB/YouTube → Mode A or B.
 
 ## Market presets (pick ONE per account and stay vertical)
 - **EN-US女频:** billionaire/werewolf/revenge/contract-marriage; audience skews

@@ -36,7 +36,10 @@ publishes content.
 8. TikTok/FB: search top drama-clip accounts per market preset (EN-US女频,
    CN-MY/SG); note which titles + hook styles are converting (comments asking
    "app name?" = conversion signal). App-store chart movement of ReelShort/
-   DramaBox/ShortMax as demand signal.
+   DramaBox/ShortMax as demand signal; watch the fast risers too (FreeReels,
+   NetShort/麦芽, ByteDance PineDrama/TikTok Minis — new material libraries =
+   low-saturation windows, and TikTok competing in-market means original Mode-B
+   teasers beat re-cuts there).
 
 **Kids preset:** validate against evergreen kids categories (colors, counting,
 animals, feelings, vehicles, routines) + seasonal calendar; meme velocity is

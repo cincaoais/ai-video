@@ -23,7 +23,8 @@ only for true gaps: track? length (60–90s default; TikTok cut >60s)? style pre
 recurring character (`assets/characters/`)? For `novel_cn`: novel + platform +
 chapters + is the 关键词 approved (if not: output application text, STOP).
 For `drama_cps`: which portal/drama + Mode A (official-clip re-cut, $0 generation)
-or Mode B (AI teaser) + market preset (EN-US女频 | CN-MY/SG) + tracking link ready?
+or Mode B (AI teaser; DEFAULT for TikTok — re-cuts get suppressed there, route
+Mode A to FB/YT) + market preset (EN-US女频 | CN-MY/SG) + tracking link ready?
 (if no link: output portal signup steps, STOP). Use shot-templates-drama-cps.md.
 **Batch mode:** if today's trend brief has ≥2 ideas scoring ≥15/20, offer to
 produce 2–3 videos this session (amortizes setup + usage allocation).

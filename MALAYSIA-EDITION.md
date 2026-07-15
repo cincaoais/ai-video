@@ -43,6 +43,11 @@ Never: buy/rent 实名 accounts, VPN region tricks, re-upload full episodes.
 ## Pipeline deltas for drama_cps (everything else identical)
 - Track `drama_cps` in the producer skill; templates:
   prompts/shot-templates-drama-cps.md (Mode A re-cut / Mode B AI teaser).
+- Platform routing (2026): TikTok defaults to **Mode B** — TikTok runs its own
+  short-drama products (Minis/PineDrama) and suppresses re-cut 搬运 clips while
+  paying up to 20x for original content; original AI teasers also ride the AI漫剧
+  wave. Route Mode A re-cuts to FB/YouTube instead (FB/IG with the Meta
+  Partnership-Ads tag).
 - Stage 4 (assemble) output adds the attribution package (tracking link placements text).
 - Stage 6 checklist adds: link verified in target geo · clip source = official
   library · portal branding rules met.
