@@ -14,3 +14,9 @@
 - drama_cps portal approved + tracking link tested in target geo: {YES/NO}
 - fal dashboard hard cap set: {$..}
 - Warm-up week completed: TikTok {..} · Douyin {..} · YT {..}
+
+## Generation models (pinned by R&D 2026-07-15 — re-pin via /rnd, verify prices at pre-flight)
+- Drafts + finals: `fal-ai/bytedance/seedance/v1/pro/fast` (720p drafts → 1080p approved finals)
+- B-roll: `fal-ai/ltx-2/text-to-video/fast`
+- Opt-in premium (explicit approval only, breaks $2.50 cap): `bytedance/seedance-2.0/*`
+- Pre-flight step: query fal MCP `get_pricing` for both pinned models; if changed, update MASTER-PLAN §5 math

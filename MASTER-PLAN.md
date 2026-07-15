@@ -12,7 +12,7 @@ all China-track material below remains valid and unchanged.*
 |---|---|
 | Priority track | **TikTok/Shorts trending (EN)**, with **Chinese novel 推文 (Douyin)** as parallel track; kids preset kept as optional third |
 | Budget | Flexible, soft cap **US$50/month** on generation (≈ 15–25 finished videos). Per-video hard cap: **$2.50** |
-| Generation backbone | **fal.ai** (pay-per-use, official + community MCP, Seedance 2.0 and 1,000+ models) |
+| Generation backbone | **fal.ai** (pay-per-use, official hosted MCP, 1,000+ models). Pinned tiers (R&D 2026-07-15): drafts+finals **Seedance 1.0 Pro Fast** (~$0.022/s @720p) · B-roll **LTX-2 Fast** ($0.04/s). Seedance 2.0 = opt-in premium (~$15–22/video — breaks the cap, needs explicit approval) |
 | Publishing | EN: posting-service MCP (Upload-Post or similar) after your approval · CN: manual upload package for Douyin |
 | Your workload | Stage 0 input (~1 min) + Stage 6 review (~5–10 min) per video |
 
@@ -74,19 +74,16 @@ re-posts), with the 关键词 in title/comment and the video link backfilled (�
 
 ### 2.2 Video generation (fal.ai)
 5. Create account at fal.ai → Dashboard → API Keys → create key. Add ~$20 credit.
-6. Add a fal MCP server to Claude Desktop config
-   (`claude_desktop_config.json` → macOS: `~/Library/Application Support/Claude/`,
-   Windows: `%APPDATA%\Claude\`):
-```json
-{ "mcpServers": {
-    "fal-ai": {
-      "command": "npx", "args": ["-y", "fal-ai-mcp"],
-      "env": { "FAL_KEY": "YOUR-FAL-KEY" } } } }
-```
-   (Any of the maintained community fal MCP servers works; fal's hosted server at
-   `https://mcp.fal.ai/mcp` is the alternative once your client supports its auth.)
-7. Test in a Cowork chat: *"Search fal models for seedance and show pricing for a
-   10-second 720p generation."* You should see live model data.
+6. Add fal's **official hosted MCP server** (Claude Desktop → Settings →
+   Connectors → Add custom connector):
+   - URL: `https://mcp.fal.ai/mcp` · Auth header: `Authorization: Bearer YOUR-FAL-KEY`
+   - Claude Code equivalent: `claude mcp add --transport http fal-ai
+     https://mcp.fal.ai/mcp --header "Authorization: Bearer YOUR-FAL-KEY"`
+   - (Community npm servers like `fal-ai-mcp` are unmaintained — avoid. The hosted
+     server has `get_pricing` + `recommend_model`, and your key is never stored.)
+7. Test in a Cowork chat: *"Search fal models for seedance and get_pricing for
+   fal-ai/bytedance/seedance/v1/pro/fast at 720p."* You should see live model
+   data. Re-check pricing at every pre-flight — it moves (see rnd/ASSUMPTIONS.md).
 
 ### 2.3 Publishing (EN platforms)
 8. Sign up for a multi-platform posting service with an MCP server (e.g. Upload-Post —
@@ -196,11 +193,15 @@ client work — selling this pipeline's output at $50–200/video.
 
 ## 5. Budget model (soft cap $50/month)
 
-Per finished 60–90s video: 6–10 shots × $0.15–0.40 (Seedance via fal, 720p draft
-workflow) + ~30% retries + TTS/BGM ≈ **$1.50–2.50**. Monthly at $50 → ~20–25 videos
+Per finished 60–90s video on the pinned tiers: 6–10 shots × $0.11–0.25
+(Seedance 1.0 Pro Fast, 720p drafts, 5–8s shots) + ~30% retries + TTS/BGM
+($0.03–0.15) ≈ **$1.10–2.50**. A 1080p final re-render roughly doubles a shot
+(~$0.245/5s) — re-render approved shots only. Monthly at $50 → ~20–25 videos
 → ~5–6 uploads/week across tracks. Cost levers the skill already uses: draft-res
-review, per-shot retry cap, Seedance *mini/fast* variants for B-roll shots, reusing
-character stills instead of re-describing, and one seed per episode.
+review, per-shot retry cap, LTX-2 Fast for B-roll shots, reusing character
+stills instead of re-describing, and one seed per episode. Prices are volatile —
+verify with fal MCP `get_pricing` at pre-flight; Seedance 2.0 stays opt-in
+premium (~$15–22/video, explicit approval required).
 
 ---
 

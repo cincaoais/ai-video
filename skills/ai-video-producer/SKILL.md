@@ -45,8 +45,12 @@ of shot 1 (different pattern-interrupt, same story). Kids hard rules: calm pacin
 no chase/threat/panic, nothing dangerously imitable.
 
 ## Step 4 — Generate (fal MCP)
-Per shot: @Image1 character refs, episode seed, 720p drafts, voice per voice-sheet,
-original audio only. Retry ≤2 per shot then flag. Update `project.json` after every
+Models (pinned — see `research/config.md`): drafts+finals
+`fal-ai/bytedance/seedance/v1/pro/fast`; B-roll `fal-ai/ltx-2/text-to-video/fast`.
+Anything else (incl. Seedance 2.0, ~6–9x the cap) needs explicit user approval
+after cap math. Verify current prices via fal MCP `get_pricing` before the first
+batch. Per shot: @Image1 character refs, episode seed, 720p drafts, voice per
+voice-sheet, original audio only. Retry ≤2 per shot then flag. Update `project.json` after every
 shot. Log spend after every batch; pause + report if projection exceeds cap.
 
 ## Step 5 — Assemble (ffmpeg)
