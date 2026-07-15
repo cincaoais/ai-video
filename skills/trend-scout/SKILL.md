@@ -6,7 +6,9 @@ description: Social-media trend research producing a scored Trend Brief with 3�
 # Trend Scout
 
 Read `research/config.md` FIRST (regions, CN vertical, EN revenue model) — never
-infer regions daily. Output: one file `research/briefs/YYYY-MM-DD-brief.md` using
+infer regions daily. Also read the TOP ACTIVE INSIGHTS section of
+`logs/learnings.md`: skip formats it marks as losers, and weight proven
+hooks/formats when scoring Fit. Output: one file `research/briefs/YYYY-MM-DD-brief.md` using
 `templates/trend-brief-template.md`. Research only — this skill NEVER generates or
 publishes content.
 
