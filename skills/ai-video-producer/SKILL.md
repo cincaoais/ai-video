@@ -63,7 +63,9 @@ per-platform caption/CTA text + tracking-link placement list + pinned-comment te
 
 ## Step 5.5 — Automated QC (before the user ever looks)
 Run `scripts/qc_check.sh <file> <platform>` on every export: duration bounds,
-9:16 aspect, audio present, loudness window, black-frame scan, metadata present.
+aspect (9:16; 16:9 for longform), audio present, loudness window, black-frame
+scan, metadata present. Pass `--allow-black` ONLY for an intentional 黑屏
+cliffhanger beat (novel_cn N4) — never by default.
 Fix failures (usually re-concat or re-render one shot) before Step 6. Never
 present a file that failed QC.
 
