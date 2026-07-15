@@ -2,7 +2,8 @@
 *New in v1.2. Sits ALONGSIDE shot-templates-novel-cn.md — the China track is unchanged.*
 
 Goal: viewer watches the promo clip → clicks tracking link / searches app →
-downloads → recharges to unlock episodes → you earn 30–70% CPS commission (USD).
+downloads → recharges to unlock episodes → you earn CPS commission on recharges
+(rate varies by portal/tier — RS Boost shows it per promotion page).
 Every creative decision serves the click-through.
 
 ## Two production modes (pick per project)
@@ -53,9 +54,13 @@ EN: "Watch what she does next — full episode in the app 👉 link in bio."
 - Tracking link/code from the CPS portal goes in: TikTok bio (+ pinned comment),
   YouTube description + pinned comment, FB page link. Verify the link resolves in
   the target country BEFORE posting.
-- Registration for portals like RS Boost needs an invitation code — obtain from
-  official channels/verified first-tier distributors ONLY; anyone selling the code
-  with a course is a red flag. Never pay to join.
+- RS Boost (cps.reelshort.com) signup is open — invitation codes are optional
+  rate-boosters, not entry tickets. Other portals are distributor-gated: official
+  channels/verified first-tier distributors ONLY. Anyone selling codes/授权/courses
+  is a scam (CCTV-covered pattern). Never pay to join.
+- Meta 2026: FB/IG affiliate posts MUST use the Partnership-Ads/branded-content
+  tag — untagged UGC-style affiliate = "Deceptive Practice" (rejection + account
+  penalty).
 - Disclosures: TikTok AI label for Mode B; YouTube altered/synthetic toggle;
   respect each portal's watermark/branding requirements on clips.
 - Log per video in published-log.md: platform, drama title, link ID, mode A/B —

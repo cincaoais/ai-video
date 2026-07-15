@@ -2,9 +2,10 @@
 *~30–45 minutes. Verified July 2026; re-check each item in-app at signup.*
 
 ## A. EN track — TikTok Creator Rewards eligibility (DECIDES YOUR EN REVENUE MODEL)
-- [ ] Creator Rewards is only live in ~10–12 countries: US, UK, France, Germany,
-      Italy, Spain, Brazil, Mexico, Japan, South Korea (+ Australia/Canada per some
-      sources). SE Asia / Middle East expected late 2026–2027.
+- [ ] Creator Rewards is live in roughly 8–12 countries (US, UK, DE, FR, IT, ES
+      + AU/CA solidly; BR/MX/JP/KR per some trackers — public lists conflict).
+      NOT live in SEA and there is NO official timeline (recurring "late
+      2026–2027" claims are rumor). The in-app check below is the only ground truth.
 - [ ] You must be PHYSICALLY located in an eligible country with matching bank/tax
       info. VPN/region tricks violate ToS → permanent ban + forfeited earnings.
       We never do this.
@@ -15,7 +16,7 @@
       3. Brand deals + client video services ($50–200/video)
       TikTok remains the free A/B-testing + audience-growth ground either way.
       Requirements to still note: CRP needs personal (not business) account, 18+,
-      10k followers, 100k views/30d, videos >60s.
+      10k followers, 100k views/30d, videos ≥1 min (terms updated Jan 2026).
 
 ## B. CN track — payout reality check (DECIDES WHETHER CN TRACK RUNS)
 - [ ] 番茄达人 pays INDIVIDUALS into the Douyin wallet (抖音钱包); withdrawal
@@ -29,7 +30,8 @@
       other novels need their own portals (七猫达人, 起点达人…).
 - [ ] 0 followers is fine to start (别名/关键词推广); on-video anchor link needs
       1,000 Douyin followers — treat as later upgrade.
-- [ ] First 关键词 applied, approved, and confirmed searchable in the reading app.
+- [ ] First 关键词 applied, approved, and confirmed searchable in the reading app
+      (番茄 3–8字; note the weekly 回填 deadline — 每周四 21:00).
 
 ## C. Account warm-up (both tracks, week 1 — do not skip)
 - [ ] New accounts: complete profile, real usage 15–20 min/day in your niche for
@@ -38,8 +40,10 @@
       seeds the algorithm's understanding of your niche.
 
 ## D. Money & safety locks
-- [ ] Set a hard monthly spend limit INSIDE the fal.ai dashboard (independent of
-      Claude's $50 soft cap — two locks are better than one).
+- [ ] fal has NO true hard-cap setting: load ONLY your monthly budget as prepaid
+      credits (no auto top-up) so the account locks when it's spent — that's the
+      second lock beside Claude's $50 soft cap. (Re-check the dashboard for a
+      native cap feature occasionally.)
 - [ ] Publishing MCP connector set to "always ask permission".
 - [ ] Note: side income is generally taxable and 达人 payouts create a paper
       trail — check your local obligations early (pointer, not tax advice).

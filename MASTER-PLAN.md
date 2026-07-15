@@ -1,5 +1,5 @@
 # AI Video Side-Income Pipeline — Master Plan
-### Fully automated production · Human-approved publishing · Claude Cowork edition · **v1.2**
+### Fully automated production · Human-approved publishing · Claude Cowork edition · **v1.3**
 *Malaysia users: read MALAYSIA-EDITION.md after §0.5 — it adds a `drama_cps` track;
 all China-track material below remains valid and unchanged.*
 *Research compiled July 2026. Re-verify platform policies before launch — they change fast.*
@@ -51,7 +51,7 @@ and side income is generally taxable in your jurisdiction.
 ```
 
 **One 9:16 master file per topic** fans out to: TikTok (>60s cut for Creator Rewards) →
-YouTube Shorts (<3 min) → optionally IG/FB Reels. Monthly: stitch best episodes into a
+YouTube Shorts (≤3 min) → optionally IG/FB Reels. Monthly: stitch best episodes into a
 10–15 min long-form YouTube compilation **with new framing narration** (that's where
 $2–12 RPM lives, vs $0.01–0.10 on Shorts).
 
@@ -89,9 +89,13 @@ re-posts), with the 关键词 in title/comment and the video link backfilled (�
 
 ### 2.3 Publishing (EN platforms)
 8. Sign up for a multi-platform posting service with an MCP server (e.g. Upload-Post —
-   ~45 tools covering TikTok, YouTube, Instagram; get API key from their dashboard).
-   Connect your TikTok + YouTube accounts inside their app (their OAuth, already
-   platform-audited). Add their MCP to your config with your API key.
+   45 tools, 12 platforms incl. TikTok/YouTube/Instagram; hosted MCP at
+   `mcp.upload-post.com/mcp`, API key or OAuth). Free tier = 10 uploads/month
+   (fine for testing); real cadence ≈ $16/month. Connect your TikTok + YouTube
+   accounts inside their app (their OAuth — an audited aggregator also sidesteps
+   the platform API audits: DIY API posting is private-only until audited).
+   Budget alternatives: Blotato ($29/mo, hosted MCP) · Postiz (open-source,
+   self-host free, official MCP).
 9. **Set this connector to "always ask permission"** in Claude's connector settings.
    This is your second safety lock on publishing.
 10. For Douyin: no connector. The pipeline produces `output/<project>/douyin-package/`
@@ -102,10 +106,11 @@ re-posts), with the 关键词 in title/comment and the video link backfilled (�
 11. Register at an official 达人 portal (番茄达人 / 七猫达人 / 起点达人) or join a
     reputable **一级授权** team. Avoid 二/三级 middlemen (commission-skimming is the #1
     reported scam in this niche).
-12. Learn the portal flow once: pick novel → apply unique 关键词 (4–8 chars, must not
-    duplicate) → wait approval → verify keyword is searchable in the reading app →
-    publish video → **回填** the video link in the portal. The skill scripts everything
-    except the portal clicks.
+12. Learn the portal flow once: pick novel → apply unique 关键词 (番茄 3–8字,
+    七猫 4–10字, must not duplicate) → wait approval → verify keyword is searchable
+    in the reading app → publish video → **回填** the video link in the portal
+    (hard deadline 每周四 21:00, covering the prior Fri–Thu — missed 回填 pays
+    nothing). The skill scripts everything except the portal clicks.
 
 ### 2.5 First run & schedules
 13. Test end-to-end with a throwaway topic. Check every stage output in `output/`.
@@ -146,8 +151,8 @@ revenue share — licensed music splits the pool allocation).
 ### Stage 4 — Assemble (auto, ffmpeg)
 Concat → loudness normalize → burned captions (track-specific style) → export 9:16
 master + 16:9 variant + platform cuts. Phase-2 optional upgrade: community CapCut MCP
-(CapCutAPI/VectCutAPI) builds a CapCut draft instead, letting you polish by hand —
-which also strengthens your "human editing" evidence.
+(VectCutAPI, formerly CapCutAPI) builds a CapCut/剪映 draft instead, letting you
+polish by hand — which also strengthens your "human editing" evidence.
 
 ### Stage 5 — Automated QC
 Every export runs `scripts/qc_check.sh`: duration bounds per platform cut, 9:16
@@ -179,12 +184,12 @@ prompt reads this file — the loop is what compounds.
 
 | Platform | Gate | Pay mechanism | Realistic rate |
 |---|---|---|---|
-| TikTok Creator Rewards | 10k followers + 100k views/30d; videos >1 min; AI label required | RPM on qualified views | ~$0.40–1.20 /1k views (some sources report full-AI exclusions — verify in-app terms) |
-| YouTube Shorts | YPP: 1k subs + 10M Shorts views/90d OR 4k watch-hrs (entry tier 500 subs) | pooled, 45% after music fees | ~$0.01–0.10 /1k views |
+| TikTok Creator Rewards | 10k followers + 100k views/30d; videos ≥1 min; AI label required | RPM on qualified views | ~$0.20–1.00 /1k views, declining (no official figure; no official full-AI exclusion — the real gate is the originality/quality bar) |
+| YouTube Shorts | YPP: 1k subs + 10M Shorts views/90d OR 4k watch-hrs (Shorts-feed time doesn't count toward hrs; entry tier 500 subs + 3 uploads/90d + 3k hrs or 3M Shorts views = fan funding only, no ad share) | pooled, 45% after music fees | ~$0.01–0.10 /1k views |
 | YouTube long-form | same YPP | per-impression ads | $2–12 RPM (the real prize) |
 | YouTube made-for-kids | quality principles + COPPA | contextual ads only | ~$1–3 RPM; brand deals are the true revenue |
 | Douyin 推文 (CN novel) | 授权 + unique 关键词 | commission per conversion | ~¥5–12 /单 (番茄 ≈ ¥8) — pay-per-conversion, uncorrelated with follower count |
-| 红果/短剧推广 | authorization via 番茄/巨量 ecosystem | promo commission / 分账 | verify current terms in the 达人 portal |
+| 红果/短剧推广 | authorization via 番茄达人中心/巨量 ecosystem | CPA 拉新 ~¥7–9/单 (still pays) | playback/分账 economics collapsed 2026-06 (−95%) — take CPA 拉新 offers, avoid 分账 plays; verify current terms in the portal |
 
 **Strategic read:** the CN 推文 track can pay from day one (no follower threshold);
 the EN track is a 3–6 month compounding build toward Creator Rewards + YPP + brand
@@ -215,16 +220,24 @@ previous uploads (YouTube "inauthentic content" is a channel-level penalty)
 ☐ no real-person likeness.
 
 **Kids preset extra:** ☐ made-for-kids designation correct (COPPA is a legal duty,
-penalties up to ~$53k/violation) ☐ calm pacing, no chase/threat/panic, nothing
-dangerously imitable ☐ passes YouTube kids quality principles.
+$53,088/violation; the amended COPPA Rule is fully in force since 2026-04-22 —
+re-check obligations before the first kids video) ☐ calm pacing, no
+chase/threat/panic, nothing dangerously imitable ☐ passes YouTube kids quality
+principles.
 
 **CN track extra:** ☐ 授权 valid, keyword approved & searchable ☐ Douyin AI 内容声明
 ticked (law since 2025-09-01; unlabeled AI risks 限流/下架/封号) ☐ never strip AI
 watermarks/metadata (explicitly illegal) ☐ 回填 done ☐ content isn't 低俗/虚假 bait.
 
+**drama_cps extra:** ☐ FB/IG posts use Meta's Partnership-Ads/branded-content tag
+(2026 rule — untagged UGC-style affiliate = "Deceptive Practice") ☐ clip source +
+tracking-link rules per MALAYSIA-EDITION.
+
 **The doctrine:** platforms don't punish AI — they punish *absent humans*. Your review
 gate, logged edits, recurring characters, and analytics-driven variation are what keep
-every channel monetizable.
+every channel monetizable. This is now enforced, not theoretical: YouTube's Jan 2026
+wave terminated ~16 AI-slop channels, likeness detection lets anyone claim AI content
+using their face/voice, and Douyin removed 53.8万 unlabeled/infringing AI videos.
 
 ---
 
@@ -245,4 +258,20 @@ offers; revisit budget only when a track proves ROI.
 
 See README.md for the install order; the folder itself is the file map
 (`skills/`, `prompts/`, `templates/`, `scripts/`, and `project-workspace/` —
-the last one is what you copy out as your Cowork project folder).
+the last one is what you copy out as your Cowork project folder, with
+`prompts/`, `templates/`, `scripts/` copied inside it).
+
+---
+
+## Changelog
+- **v1.3 (2026-07-15)** — R&D cycle 1: pinned generation tiers (Seedance 1.0 Pro
+  Fast + LTX-2 Fast; Seedance 2.0 = opt-in premium) and corrected §5 budget math;
+  §2.2 switched to the official hosted fal MCP; install copies
+  prompts/templates/scripts into the workspace; QC script hardened (fail-closed,
+  tolerances, longform checks, `--allow-black`); storyboard contract updated
+  (drama_cps, hook A/B, per-shot seed/model, tracking-link metadata); platform
+  facts refreshed (TikTok RPM/CRP wording, Shorts ≤3 min, YPP fan-funding detail,
+  关键词 3–8字, 回填周四21:00, amended COPPA in force, Meta Partnership-Ads tag,
+  Upload-Post tiers, VectCutAPI); performance log + learnings→templates loop
+  added; drama_cps Mode-B-first on TikTok. Details: rnd/reports/2026-07-15.
+- **v1.2 (2026-07)** — Malaysia edition addendum (drama_cps track).

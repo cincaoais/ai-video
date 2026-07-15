@@ -42,4 +42,5 @@ in one sentence; cheerful but calm outro melody.
 > helps a little sprout grow?" Soft chime, light birdsong.
 
 Compliance reminders: mark made-for-kids truthfully · YouTube altered/synthetic
-toggle ON · no branded toys/characters ever.
+toggle ON · no branded toys/characters ever · the amended COPPA Rule is fully in
+force since 2026-04-22 — re-verify obligations before the first kids video.

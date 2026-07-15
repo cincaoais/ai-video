@@ -13,8 +13,9 @@ publishes content.
 ## Sources (in order; browse like a human researcher, no scraping loops)
 
 **EN track**
-1. TikTok Creative Center → Trend Discovery (most features work without login):
-   hashtags, songs, videos, creators for the target region. ALWAYS compare 7-day vs
+1. TikTok Creative Center → Trend Discovery (browsing works logged-out; hashtag
+   SEARCH was removed in 2024, and full Keyword Insights metrics need a free
+   TikTok-for-Business login): hashtags, songs, videos, creators for the target region. ALWAYS compare 7-day vs
    30-day growth to catch pre-peak trends; prefer sounds marked approved-for-business.
 2. TikTok Creative Center → Keyword Insights: rising search terms in-niche.
 3. YouTube trending + latest Shorts of the 5 channels in `research/competitors.md`.
