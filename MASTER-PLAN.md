@@ -65,8 +65,10 @@ re-posts), with the 关键词 in title/comment and the video link backfilled (�
 
 ### 2.1 Claude side
 1. Install **Claude Desktop** (Pro/Max plan required for Cowork). Open the Cowork tab.
-2. Create a project folder on disk — copy the `project-workspace/` folder from this kit.
-   Point Cowork at it as the project folder.
+2. Create a project folder on disk — copy the `project-workspace/` folder from this
+   kit, then copy the kit's `prompts/`, `templates/` and `scripts/` folders into it
+   (the skills call them by relative path from the workspace root). Point Cowork at
+   it as the project folder.
 3. Copy `CLAUDE.md` (from this kit) into the project root. Cowork reads it every session.
 4. Install the two skills: copy `skills/ai-video-producer/` and `skills/trend-scout/`
    into your Cowork skills location (Settings → Capabilities → Skills → upload, or the
