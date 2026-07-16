@@ -6,7 +6,10 @@
 # Exit 0 = pass, 1 = fail (reasons printed), 2 = usage/environment error.
 set -u
 command -v ffprobe >/dev/null 2>&1 && command -v ffmpeg >/dev/null 2>&1 \
-  || { echo "QC ERROR: ffmpeg + ffprobe required (macOS: brew install ffmpeg)"; exit 2; }
+  || { echo "QC ERROR: ffmpeg + ffprobe required and on PATH"
+       echo "  macOS:   brew install ffmpeg"
+       echo "  Windows: winget install Gyan.FFmpeg  (then reopen the shell; run this script in Git Bash)"
+       exit 2; }
 [ $# -ge 1 ] || { echo "Usage: qc_check.sh <video> [tiktok|shorts|douyin|longform] [--allow-black]"; exit 2; }
 F="$1"; P="${2:-tiktok}"; ALLOW_BLACK="${3:-}"
 [ -f "$F" ] || { echo "QC ERROR: file not found: $F"; exit 2; }

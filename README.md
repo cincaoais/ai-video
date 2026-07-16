@@ -15,3 +15,7 @@
 
 The skills reference prompts/, templates/ and scripts/ by relative path from the
 workspace root — step 2 copies them in; keep the folder names unchanged.
+
+Prerequisites: ffmpeg + ffprobe on PATH (macOS `brew install ffmpeg` · Windows
+`winget install Gyan.FFmpeg`). scripts/qc_check.sh is bash — on Windows run it
+from Git Bash (ships with Git for Windows) or WSL, not PowerShell.

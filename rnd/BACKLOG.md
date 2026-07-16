@@ -28,7 +28,11 @@ Detail for each item: rnd/reports/2026-07-15-rnd-report.md §4.
 
 ## Blocked on user
 - fal dashboard cap check · RS Boost backend rates · 番茄达人 backend · Creative Center logged-in depth (report §2 ❓ list)
-- ffmpeg not installed on this machine (`brew install ffmpeg`) — blocks Stage 4/5 and E3
+- ffmpeg not installed — blocks Stage 4/5 and E3 (Windows: `winget install Gyan.FFmpeg`)
+- ⬜ **W1** Verify on the Windows box that Cowork can actually invoke `scripts/qc_check.sh`
+  (bash). Test: run it in Git Bash with no args → expect the usage error, exit 2. If Cowork
+  can't call bash on Windows, the QC gate needs a PowerShell port or an ffmpeg MCP —
+  decide only after the test fails. Impact H / Effort L until proven otherwise.
 
 ## Done
 - ✅ 2026-07-15 Cycle-1 full scan, verification, report, ledger, /rnd skill (commit 8cab310)
