@@ -45,14 +45,17 @@ NON-NEGOTIABLE RULES
     "chain_from" to that shot's id, else null); "t2v" for standalone
     inserts/B-roll. Keyframe shots get a generated first frame (pinned image
     tier) and run image-to-video; chained shots inherit the re-minted last
-    frame of "chain_from".
+    frame of "chain_from". At most ONE shot may set "hero": true (pinned
+    hero consistency tier, ~$1.12/5s) and only when face recognizability IS
+    the hook — omit the field everywhere else.
 12. Score BOTH hook variants 0–100 on: pattern-interrupt strength, emotional
     peak, conflict/stakes, quotability, practical value. Output as
     "hook_scores" with one-line reasoning each. If both score <60, redesign
     the hook before emitting the storyboard.
 13. estimated_cost_usd = Σ(duration_s × pinned draft-tier $/s) × 1.3 retry
     buffer + (count of keyframe boundary images × pinned image-tier $/img)
-    + TTS estimate. If it exceeds $2.50, STOP and re-plan the shot list.
+    + (hero shot duration_s × hero-tier $/s, if any) + TTS estimate.
+    If it exceeds $2.50, STOP and re-plan the shot list.
 
 OUTPUT — JSON only:
 {

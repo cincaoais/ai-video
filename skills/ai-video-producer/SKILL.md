@@ -67,6 +67,9 @@ recurring character or a `chain_from`):
    lighting/framing for the next scene") before it feeds the next shot. Never
    chain a raw extracted frame — drift compounds shot over shot.
 `gen_mode:"t2v"` shots (no character, no chain) go straight to text-to-video.
+**Hero shot (opt-in, ≤1/video):** a `hero:true` shot may use the pinned hero
+tier (Kling 3.0 Pro `elements`, ~$1.12/5s) when face recognizability IS the
+hook (e.g. drama_cps cold-open) — only if the storyboard estimate stays under cap.
 
 Per shot: @Image1 character refs, episode seed, 720p drafts, voice per
 voice-sheet, original audio only. Retry ≤2 per shot then flag — retry the SHOT,
