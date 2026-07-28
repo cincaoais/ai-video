@@ -78,6 +78,10 @@ image paths too). Log spend after every batch; pause + report if projection
 exceeds cap.
 
 ## Step 5 — Assemble (ffmpeg)
+TTS narration from the pinned TTS tier (voice per `assets/voice-sheet.md`). BGM:
+generate via the pinned music tier (generative BGM is license-safe across
+TikTok+YT+Douyin; platform in-app libraries are single-platform) and duck it
+under narration (ffmpeg `sidechaincompress`), keeping the -14 LUFS target.
 Concat → loudness normalize (target -14 LUFS) → burned captions per track →
 exports with **`-map_metadata 0`** (NEVER strip AIGC provenance metadata):
 `master-9x16.mp4`, `master-16x9.mp4`, `tiktok-90s-hookA.mp4`, `hookB` variant,

@@ -22,8 +22,12 @@
   if absent, chaining B-roll needs `fal-ai/ltx-2.3` — same price)
 - Boundary/keyframe images + last-frame re-mints: FLUX Kontext pro tier (~$0.04/img —
   confirm exact endpoint id + price via fal MCP `get_pricing`)
+- TTS (all tracks EN/CN/Malay): `fal-ai/minimax/preview/speech-2.5-turbo` ($0.06/1k chars);
+  voice ids locked in assets/voice-sheet.md
+- BGM: `cassetteai/music-generator` (~$0.02/min; generative = license-safe cross-platform)
 - Hero consistency shot (opt-in, ≤1/video, must fit cap): `fal-ai/kling-video/v3/pro/
   image-to-video` with `elements` (~$0.224/s ≈ $1.12/5s)
+- Lip-sync hook shot (opt-in, backlog L1): `fal-ai/latentsync` ($0.20 flat ≤40s)
 - Opt-in premium (explicit approval only, breaks $2.50 cap): `bytedance/seedance-2.0/*`
 - Pre-flight step: query fal MCP `get_pricing` for every pinned tier above; if changed,
   update MASTER-PLAN §5 math
