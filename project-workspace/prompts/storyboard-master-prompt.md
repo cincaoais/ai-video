@@ -46,7 +46,11 @@ NON-NEGOTIABLE RULES
     inserts/B-roll. Keyframe shots get a generated first frame (pinned image
     tier) and run image-to-video; chained shots inherit the re-minted last
     frame of "chain_from".
-12. estimated_cost_usd = Σ(duration_s × pinned draft-tier $/s) × 1.3 retry
+12. Score BOTH hook variants 0–100 on: pattern-interrupt strength, emotional
+    peak, conflict/stakes, quotability, practical value. Output as
+    "hook_scores" with one-line reasoning each. If both score <60, redesign
+    the hook before emitting the storyboard.
+13. estimated_cost_usd = Σ(duration_s × pinned draft-tier $/s) × 1.3 retry
     buffer + (count of keyframe boundary images × pinned image-tier $/img)
     + TTS estimate. If it exceeds $2.50, STOP and re-plan the shot list.
 
@@ -54,6 +58,8 @@ OUTPUT — JSON only:
 {
   "title_options": ["...", "...", "..."],
   "hook_rationale": "why shot 1 stops the scroll",
+  "hook_scores": { "1A": { "score": 0, "reason": "..." },
+                   "1B": { "score": 0, "reason": "..." } },
   "shots": [
     { "id": "1A", "duration_s": 8,
       "video_prompt": "<full self-contained generation prompt>",

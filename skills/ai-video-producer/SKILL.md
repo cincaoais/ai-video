@@ -42,8 +42,10 @@ follow the portal's promo-material rules and carry the platform AI label.
 ## Step 3 — Script + storyboard
 Run `prompts/storyboard-master-prompt.md` + matching shot-template file. Save
 `output/<project>/storyboard.json`. **Hook A/B is default:** produce TWO variants
-of shot 1 (different pattern-interrupt, same story). Kids hard rules: calm pacing,
-no chase/threat/panic, nothing dangerously imitable.
+of shot 1 (different pattern-interrupt, same story). The storyboard scores both
+hooks 0–100 (virality rubric); generate the higher-scored variant first, and if
+both score <60 redesign the hook before generating anything. Kids hard rules:
+calm pacing, no chase/threat/panic, nothing dangerously imitable.
 
 ## Step 4 — Generate (fal MCP)
 Models (pinned — see `research/config.md`): drafts+finals
