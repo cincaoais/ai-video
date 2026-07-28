@@ -1,7 +1,29 @@
 # R&D Backlog (living, priority-ordered)
 
 Status: ⬜ open · 🟨 approved/in progress · ✅ done (date + commit) · ❌ dropped.
-Detail for each item: rnd/reports/2026-07-15-rnd-report.md §4.
+Detail: rnd/reports/2026-07-15-rnd-report.md §4 (Q/S/E items) ·
+rnd/reports/2026-07-28-rnd-report.md §4 (K/C/L items, Cycle 2).
+
+## 🎬 Cycle 2 — ViMax techniques + advancement scan (2026-07-28)
+- ✅ **K1** Keyframe-chained generation (boundary image → I2V → last-frame extract →
+  Flux-Kontext re-mint → next shot) as default for character/continuity shots — 2026-07-28
+- ✅ **K2** Hook virality-scoring rubric (0–100) on hook variants at storyboard time — 2026-07-28
+- ✅ **K3** Hero-shot tier: ≤1 shot/video Kling 3.0 Pro `elements` (~$1.12/5s), opt-in — 2026-07-28
+- ✅ **K4** Audio pins: MiniMax Speech-2.5 Turbo TTS (EN/CN/Malay) · CassetteAI generative
+  BGM · sidechain ducking in assemble — 2026-07-28
+- ⬜ **C1** Karaoke word-highlight captions (WhisperX/TTS timestamps → ASS → ffmpeg) —
+  Impact H / Effort M — blocked on ffmpeg+whisper install (W1/E3)
+- ⬜ **C2** Auto-thumbnail step (frame + overlay + title) — Impact M / Effort L
+- ⬜ **C3** qc_check.sh frame-sampled visual-defect check (broken caption overlays) —
+  Impact M / Effort L — pairs with C1
+- ⬜ **C4** Spend-governance pre-generation check script (Hard Rule 3 as code) — Impact M / Effort L
+- ⬜ **C5** Doc sync: MASTER-PLAN §5 budget math + changelog for keyframe workflow — Effort L
+- ⬜ **L1** LatentSync talking-hook shot ($0.20 flat, clean frontal close-ups only,
+  drama_cps Mode B) — Impact M / Effort L
+- ⬜ **G13-check** Verify pinned base LTX-2 supports end-frame (else move B-roll chaining
+  to LTX-2.3, same price) — one fal MCP query at next pre-flight
+- 📌 Strategy (user decision, not a task): 小说推文 saturated + Douyin subsidies rotating to
+  真人短剧; SEA short-drama growing (Sensor Tower) → consider weighting drama_cps > novel_cn
 
 ## 🔧 Quick wins
 - ✅ **Q1** Pin model tiers + fix §5 budget math + fal MCP `get_pricing` pre-flight step — 2026-07-15 (approved: Q-A option 1)
@@ -21,7 +43,13 @@ Detail for each item: rnd/reports/2026-07-15-rnd-report.md §4.
 ## 🧪 Experiments (spend, within caps, log to spend.md — each needs explicit approval)
 - ⬜ **E1** Model bake-off Seedance v1 Pro Fast vs LTX-2 Fast vs Wan 2.5 (~$2)
 - ⬜ **E2** TTS bake-off Kokoro vs MiniMax 2.8 HD (CN) / Kokoro vs ElevenLabs (EN) (<$1)
+  — note 2026-07-28: MiniMax Speech-2.5 Turbo ($0.06/1k, EN+CN+Malay) now the pinned
+  default; bake-off validates it vs alternatives
 - ⬜ **E3** End-to-end throwaway run, no publish (≤$2.50) — after Q1–Q3
+- ⬜ **E4** Keyframe-chain vs T2V bake-off: same storyboard both ways, compare drift (~$2;
+  fold into E3)
+- ⬜ **E5** Monthly Seedance 2.0 reference-to-video benchmark vs chained baseline
+  (~$7.26/30s from monthly headroom, never per-video cap)
 
 ## 🔁 Recurring (cadences live in rnd/ASSUMPTIONS.md)
 - fal pricing (30d) · TikTok CRP/RPM (30d) · CPS landscape+rates (30d) · 推文/红果 rates (30d) · YT policies (90d) · COPPA/labeling law (90d) · Upload-Post tiers (90d) · skills spec (180d)
