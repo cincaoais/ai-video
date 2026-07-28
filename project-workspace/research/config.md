@@ -15,8 +15,13 @@
 - fal dashboard hard cap set: {$..}
 - Warm-up week completed: TikTok {..} · Douyin {..} · YT {..}
 
-## Generation models (pinned by R&D 2026-07-15 — re-pin via /rnd, verify prices at pre-flight)
-- Drafts + finals: `fal-ai/bytedance/seedance/v1/pro/fast` (720p drafts → 1080p approved finals)
-- B-roll: `fal-ai/ltx-2/text-to-video/fast`
+## Generation models (pinned by R&D 2026-07-28 Cycle 2 — re-pin via /rnd, verify prices at pre-flight)
+- Drafts + finals: `fal-ai/bytedance/seedance/v1/pro/fast` (720p drafts → 1080p approved
+  finals; image-to-video variant bills the same ~$0.022/s — used by the keyframe workflow)
+- B-roll: `fal-ai/ltx-2/text-to-video/fast` (⚠ verify end-frame support at pre-flight;
+  if absent, chaining B-roll needs `fal-ai/ltx-2.3` — same price)
+- Boundary/keyframe images + last-frame re-mints: FLUX Kontext pro tier (~$0.04/img —
+  confirm exact endpoint id + price via fal MCP `get_pricing`)
 - Opt-in premium (explicit approval only, breaks $2.50 cap): `bytedance/seedance-2.0/*`
-- Pre-flight step: query fal MCP `get_pricing` for both pinned models; if changed, update MASTER-PLAN §5 math
+- Pre-flight step: query fal MCP `get_pricing` for every pinned tier above; if changed,
+  update MASTER-PLAN §5 math

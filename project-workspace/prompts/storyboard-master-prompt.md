@@ -40,8 +40,15 @@ NON-NEGOTIABLE RULES
 10. Every shot carries "seed" (echo the episode seed) and "model": "draft"
     (pinned draft tier) or "broll" (pinned B-roll tier — use for insert/B-roll
     shots like T4). Never name a raw model id here; tiers are pinned in config.
-11. estimated_cost_usd = Σ(duration_s × pinned draft-tier $/s) × 1.3 retry
-    buffer + TTS estimate. If it exceeds $2.50, STOP and re-plan the shot list.
+11. Every shot carries "gen_mode": "keyframe" for any shot featuring a
+    recurring character OR continuing directly from the previous shot (set
+    "chain_from" to that shot's id, else null); "t2v" for standalone
+    inserts/B-roll. Keyframe shots get a generated first frame (pinned image
+    tier) and run image-to-video; chained shots inherit the re-minted last
+    frame of "chain_from".
+12. estimated_cost_usd = Σ(duration_s × pinned draft-tier $/s) × 1.3 retry
+    buffer + (count of keyframe boundary images × pinned image-tier $/img)
+    + TTS estimate. If it exceeds $2.50, STOP and re-plan the shot list.
 
 OUTPUT — JSON only:
 {
@@ -52,14 +59,17 @@ OUTPUT — JSON only:
       "video_prompt": "<full self-contained generation prompt>",
       "dialogue": "...", "sfx": "...", "camera": "...",
       "caption_overlay": "...", "consistency_refs": ["@Image1"],
-      "seed": "{episode_seed}", "model": "draft" },
+      "seed": "{episode_seed}", "model": "draft",
+      "gen_mode": "keyframe", "chain_from": null },
     { "id": "1B", "duration_s": 8, "video_prompt": "<second hook variant>",
       "dialogue": "...", "sfx": "...", "camera": "...",
       "caption_overlay": "...", "consistency_refs": ["@Image1"],
-      "seed": "{episode_seed}", "model": "draft" },
+      "seed": "{episode_seed}", "model": "draft",
+      "gen_mode": "keyframe", "chain_from": null },
     { "id": 2, "duration_s": 6, "video_prompt": "...", "dialogue": "...",
       "sfx": "...", "camera": "...", "caption_overlay": "...",
-      "consistency_refs": [], "seed": "{episode_seed}", "model": "broll" }
+      "consistency_refs": [], "seed": "{episode_seed}", "model": "broll",
+      "gen_mode": "t2v", "chain_from": null }
   ],
   "audio_plan": { "narration_voice": "...", "bgm_mood": "..." },
   "metadata": {
@@ -78,4 +88,5 @@ OUTPUT — JSON only:
 Notes: include the "novel_cn"/"drama_cps" blocks only for their tracks.
 "douyin_ai_shengming" is true only for Douyin uploads (novel_cn) — false for
 drama_cps (TikTok AI label / YT synthetic toggle apply instead). Mode A
-(drama_cps) shots use "edit_notes" instead of "video_prompt" and no model field.
+(drama_cps) shots use "edit_notes" instead of "video_prompt" and no
+model/gen_mode fields.

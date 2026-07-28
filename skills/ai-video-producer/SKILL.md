@@ -3,7 +3,7 @@ name: ai-video-producer
 description: End-to-end AI short-video production pipeline (research → script → storyboard → Seedance/fal generation → assembly → QC → human-approved publishing). Use this skill whenever the user provides a topic, a short prompt, a screenshot of a brief or trend, a novel name, or says anything like "make a video", "produce today's video", "推文", "短剧", "drama clip", "CPS", "new episode", "run a batch", or drops content that should become a TikTok/Shorts/Douyin video — even if they don't say the word "video" explicitly.
 ---
 
-# AI Video Producer (v1.2)
+# AI Video Producer (v1.3)
 
 Tracks: `tiktok` (default) · `novel_cn` · `drama_cps` (Malaysia edition) · `kids` · `client`.
 Config: read `research/config.md` first (regions, verticals, pre-flight verdicts).
@@ -47,12 +47,30 @@ no chase/threat/panic, nothing dangerously imitable.
 
 ## Step 4 — Generate (fal MCP)
 Models (pinned — see `research/config.md`): drafts+finals
-`fal-ai/bytedance/seedance/v1/pro/fast`; B-roll `fal-ai/ltx-2/text-to-video/fast`.
-Anything else (incl. Seedance 2.0, ~6–9x the cap) needs explicit user approval
-after cap math. Verify current prices via fal MCP `get_pricing` before the first
-batch. Per shot: @Image1 character refs, episode seed, 720p drafts, voice per
-voice-sheet, original audio only. Retry ≤2 per shot then flag. Update `project.json` after every
-shot. Log spend after every batch; pause + report if projection exceeds cap.
+`fal-ai/bytedance/seedance/v1/pro/fast`; B-roll `fal-ai/ltx-2/text-to-video/fast`;
+boundary/keyframe images: pinned image tier (~$0.04/img). Anything else (incl.
+Seedance 2.0, ~6–9x the cap) needs explicit user approval after cap math. Verify
+current prices via fal MCP `get_pricing` before the first batch.
+
+**Keyframe chaining — default for `gen_mode:"keyframe"` shots** (any shot with a
+recurring character or a `chain_from`):
+1. Boundary frame: generate the shot's FIRST frame with the pinned image tier,
+   passing @Image1 ref + the character's 2-line description; chained shots also
+   pass the re-minted last frame of the `chain_from` shot.
+2. Clip: same pinned draft tier via its `/image-to-video` endpoint (same $/s as
+   text-to-video).
+3. Handoff: extract the clip's last frame
+   (`ffmpeg -sseof -0.1 -i shot.mp4 -frames:v 1 last.png`), then RE-MINT it
+   through the image tier ("keep this exact character/outfit, adjust
+   lighting/framing for the next scene") before it feeds the next shot. Never
+   chain a raw extracted frame — drift compounds shot over shot.
+`gen_mode:"t2v"` shots (no character, no chain) go straight to text-to-video.
+
+Per shot: @Image1 character refs, episode seed, 720p drafts, voice per
+voice-sheet, original audio only. Retry ≤2 per shot then flag — retry the SHOT,
+never the whole video. Update `project.json` after every shot (record boundary
+image paths too). Log spend after every batch; pause + report if projection
+exceeds cap.
 
 ## Step 5 — Assemble (ffmpeg)
 Concat → loudness normalize (target -14 LUFS) → burned captions per track →
