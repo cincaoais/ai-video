@@ -23,6 +23,11 @@
 - Boundary/keyframe images + last-frame re-mints: FLUX Kontext pro tier — CONFIRMED
   2026-07-29 via fal `get_pricing`: `fal-ai/flux-pro/kontext` (image-to-image re-mints)
   and `fal-ai/flux-pro/kontext/text-to-image` (first boundary frame), both $0.04/img
+- Frame handoff: `fal-ai/ffmpeg-api/extract-frame` server-side ($0.0002/compute-s ≈
+  $0.001/call) — local ffmpeg extraction is verification-only (E3)
+- ⚠ Seedance t2v submissions: ALWAYS the full `.../fast/text-to-video` alias — the bare
+  endpoint id bills but results are unfetchable via MCP (E3 lost $0.10 to this). i2v full
+  path `.../fast/image-to-video` fetches fine. Tier renders SILENT video; audio at assembly
 - TTS (all tracks EN/CN/Malay): `fal-ai/minimax/preview/speech-2.5-turbo` ($0.06/1k chars);
   voice ids locked in assets/voice-sheet.md
 - BGM: `cassetteai/music-generator` (~$0.02/min; generative = license-safe cross-platform)

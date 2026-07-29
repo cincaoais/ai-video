@@ -22,7 +22,10 @@ NON-NEGOTIABLE RULES
    and character appearance (or @Image1 ref) in every prompt. Video models have no
    memory between clips — never write "same as before".
 4. One action per shot. Write native audio into each prompt: dialogue in quotes,
-   SFX, music mood. Original audio only (no licensed songs).
+   SFX, music mood. Original audio only (no licensed songs). Note: the pinned
+   draft tier renders SILENT video — the audio text still shapes performance
+   and timing, but actual dialogue/SFX/music are delivered by TTS/BGM/foley at
+   assembly (SKILL Step 5).
 5. Kids track: slow pacing, no chase/threat/panic, nothing dangerously imitable,
    calm voices, clear takeaway.
 6. novel_cn track: structure = 黄金3秒 hook (strongest contradiction/cliffhanger

@@ -8,7 +8,9 @@
    description. One seed per episode. Never redesign mid-series.
 5. Keyframe workflow (SKILL Step 4): the ref stills + 2-line description are the
    inputs for every boundary-frame generation AND for last-frame re-mints
-   ("keep this exact character/outfit"). Hero shots (Kling elements tier) pass
+   ("keep this exact character/outfit"). sheet.md must enumerate every accessory
+   precisely (color/count/position) — accessories drift first in chained
+   generations (E3 evidence). Hero shots (Kling elements tier) pass
    ref-01 as the frontal image and ref-02..04 as reference_images.
 6. Why: consistency = watchability = the IP asset (merch/licensing later); also your
    clearest "original character" evidence vs copyright claims. As of 2026 it is

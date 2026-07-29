@@ -3,7 +3,7 @@ name: ai-video-producer
 description: End-to-end AI short-video production pipeline (research → script → storyboard → Seedance/fal generation → assembly → QC → human-approved publishing). Use this skill whenever the user provides a topic, a short prompt, a screenshot of a brief or trend, a novel name, or says anything like "make a video", "produce today's video", "推文", "短剧", "drama clip", "CPS", "new episode", "run a batch", or drops content that should become a TikTok/Shorts/Douyin video — even if they don't say the word "video" explicitly.
 ---
 
-# AI Video Producer (v1.3)
+# AI Video Producer (v1.4)
 
 Tracks: `tiktok` (default) · `novel_cn` · `drama_cps` (Malaysia edition) · `kids` · `client`.
 Config: read `research/config.md` first (regions, verticals, pre-flight verdicts).
@@ -61,18 +61,26 @@ recurring character or a `chain_from`):
    pass the re-minted last frame of the `chain_from` shot.
 2. Clip: same pinned draft tier via its `/image-to-video` endpoint (same $/s as
    text-to-video).
-3. Handoff: extract the clip's last frame
-   (`ffmpeg -sseof -0.1 -i shot.mp4 -frames:v 1 last.png`), then RE-MINT it
-   through the image tier ("keep this exact character/outfit, adjust
-   lighting/framing for the next scene") before it feeds the next shot. Never
-   chain a raw extracted frame — drift compounds shot over shot.
-`gen_mode:"t2v"` shots (no character, no chain) go straight to text-to-video.
+3. Handoff: extract the clip's last frame SERVER-SIDE via
+   `fal-ai/ffmpeg-api/extract-frame` (~$0.001/call; a local
+   `ffmpeg -sseof -0.1 -i shot.mp4 -frames:v 1 last.png` copy is verification
+   only), then RE-MINT it through the image tier before it feeds the next
+   shot. Re-mint prompts restate the 2-line description AND enumerate every
+   accessory explicitly (color/count/position, e.g. "single copper wire
+   antenna with ONE red bead") — accessories are where chained drift
+   concentrates (E3). Never chain a raw extracted frame — drift compounds
+   shot over shot.
+`gen_mode:"t2v"` shots (no character, no chain) go straight to text-to-video —
+ALWAYS via the full `.../fast/text-to-video` alias: bare-endpoint-id jobs
+complete and bill but their results are unfetchable through the MCP (E3).
 **Hero shot (opt-in, ≤1/video):** a `hero:true` shot may use the pinned hero
 tier (Kling 3.0 Pro `elements`, ~$1.12/5s) when face recognizability IS the
 hook (e.g. drama_cps cold-open) — only if the storyboard estimate stays under cap.
 
 Per shot: @Image1 character refs, episode seed, 720p drafts, voice per
-voice-sheet, original audio only. Retry ≤2 per shot then flag — retry the SHOT,
+voice-sheet, original audio only. NOTE: the pinned draft tier renders SILENT
+video (Seedance 1.0 ignores audio prompt text) — all audio lands at Step 5;
+don't debug "missing audio" on raw clips. Retry ≤2 per shot then flag — retry the SHOT,
 never the whole video. Update `project.json` after every shot (record boundary
 image paths too). Log spend after every batch; pause + report if projection
 exceeds cap.
