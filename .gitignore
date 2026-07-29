@@ -1,2 +1,12 @@
 .DS_Store
 **/.DS_Store
+
+# Generated video projects: clips, frames, audio and masters are large and
+# regenerable — keep them out of git. The lightweight per-project state files
+# stay tracked as run evidence (this is the pattern set by the E3 commit).
+**/output/**
+!**/output/**/
+!**/output/**/.keep
+!**/output/**/*.json
+!**/output/**/*.srt
+!**/output/**/*.md
