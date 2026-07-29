@@ -1,0 +1,57 @@
+{
+  "title_options": [
+    "the rally that broke the internet 🏸",
+    "he was NOT losing that point",
+    "wait for the dive... 🤯"
+  ],
+  "hook_rationale": "1A: full-stretch diving save with the shuttle inches from the floor — motion + stakes in frame 1. 1B: net-cam POV jump smash straight at the lens — direct physical threat to the viewer, strongest pattern-interrupt.",
+  "hook_scores": {
+    "1A": { "score": 74, "reason": "High-stakes motion instantly readable; slightly generic sports-clip opening" },
+    "1B": { "score": 79, "reason": "Smash directly at the viewer breaks the fourth wall — rarest interrupt of the two; risk: shuttle may render oddly at high speed" }
+  },
+  "shots": [
+    { "id": "1A", "duration_s": 5,
+      "video_prompt": "vertical 9:16 courtside smartphone footage, handheld with slight natural shake, bright indoor arena lighting, realistic authentic look, no watermarks, no on-screen text. A lean male badminton player in his mid-20s with short black hair, wearing a bright RED sleeveless jersey, white shorts, ONE white sweatband on his RIGHT wrist, holding a racket with a YELLOW grip, dives full-stretch across a green-mat indoor badminton court with white lines and saves a white shuttlecock inches from the floor, sliding on his side as chalk dust kicks up. Blurred crowd stands in the background. Camera at courtside floor level, tracking the dive. Squeak of shoes, crowd gasp.",
+      "dialogue": "", "sfx": "shoe squeal, crowd gasp", "camera": "courtside floor level, tracking lateral dive",
+      "caption_overlay": "HE SAVED THAT?!", "consistency_refs": [],
+      "seed": "424242", "model": "draft", "gen_mode": "keyframe", "chain_from": null },
+    { "id": "1B", "duration_s": 5,
+      "video_prompt": "vertical 9:16 courtside smartphone footage, handheld with slight natural shake, bright indoor arena lighting, realistic authentic look, no watermarks, no on-screen text. Net-camera POV low over the net tape: a lean male badminton player in his mid-20s with short black hair, bright RED sleeveless jersey, white shorts, ONE white sweatband on his RIGHT wrist, racket with a YELLOW grip, leaps and jump-smashes a white shuttlecock DIRECTLY TOWARD THE CAMERA on a green-mat indoor court, shuttle filling the frame at the end. Blurred crowd behind him. Sharp racket impact crack, crowd roar.",
+      "dialogue": "", "sfx": "racket crack, crowd roar", "camera": "static net-cam POV, low angle",
+      "caption_overlay": "POV: match point vs HIM", "consistency_refs": [],
+      "seed": "424242", "model": "draft", "gen_mode": "keyframe", "chain_from": null },
+    { "id": 2, "duration_s": 5,
+      "video_prompt": "vertical 9:16 courtside smartphone footage, handheld with slight natural shake, bright indoor arena lighting, realistic authentic look, no watermarks, no on-screen text. The SAME lean male badminton player (mid-20s, short black hair, bright RED sleeveless jersey, white shorts, ONE white sweatband on RIGHT wrist, YELLOW-grip racket) springs up from the floor of the green-mat indoor court and scrambles backward as an opponent in a plain BLUE t-shirt and black shorts returns the shuttle deep; the red player lunges into a backhand clear from the backcourt. Blurred crowd background. Fast shoe squeaks, two racket hits.",
+      "dialogue": "", "sfx": "rapid shoe squeaks, racket hits", "camera": "courtside handheld, panning with the scramble",
+      "caption_overlay": "the rally wasn't over", "consistency_refs": [],
+      "seed": "424242", "model": "draft", "gen_mode": "keyframe", "chain_from": "1A" },
+    { "id": 3, "duration_s": 5,
+      "video_prompt": "vertical 9:16 courtside smartphone footage, handheld with slight natural shake, bright indoor arena lighting, realistic authentic look, no watermarks, no on-screen text. Fast net exchange on a green-mat indoor badminton court: the SAME red-jersey player (mid-20s, short black hair, bright RED sleeveless jersey, white shorts, ONE white sweatband on RIGHT wrist, YELLOW-grip racket) and the opponent in a plain BLUE t-shirt and black shorts trade three lightning net shots and flat drives at close range, shuttle whipping across the net tape. Blurred crowd leans in. Rapid-fire racket taps, rising crowd noise.",
+      "dialogue": "", "sfx": "rapid racket taps, rising crowd", "camera": "side-on at net height, quick micro-pans",
+      "caption_overlay": "3 shots in 1 second", "consistency_refs": [],
+      "seed": "424242", "model": "draft", "gen_mode": "keyframe", "chain_from": "2" },
+    { "id": 4, "duration_s": 5,
+      "video_prompt": "vertical 9:16 courtside smartphone footage, bright indoor arena lighting, realistic authentic look, no watermarks, no on-screen text, no people. Extreme slow-motion close-up: a white feather shuttlecock spinning through the air over the net tape of an indoor badminton court, feathers flexing, arena lights flaring softly behind it, green court blurred below. Locked close-up, shallow depth of field. Soft whoosh.",
+      "dialogue": "", "sfx": "slow airy whoosh", "camera": "locked slow-mo close-up",
+      "caption_overlay": "wait for it...", "consistency_refs": [],
+      "seed": "424242", "model": "draft", "gen_mode": "t2v", "chain_from": null },
+    { "id": 5, "duration_s": 5,
+      "video_prompt": "vertical 9:16 courtside smartphone footage, handheld with slight natural shake, bright indoor arena lighting, realistic authentic look, no watermarks, no on-screen text. The SAME red-jersey player (mid-20s, short black hair, bright RED sleeveless jersey, white shorts, ONE white sweatband on RIGHT wrist, YELLOW-grip racket) rockets upward on the green-mat indoor court into a towering jump smash, back arched at the apex, then whips the racket down blisteringly fast, shuttle streaking toward the far court where the opponent in a plain BLUE t-shirt dives and misses. Blurred crowd rising to their feet. Huge racket crack, explosive crowd eruption.",
+      "dialogue": "", "sfx": "racket crack, crowd eruption", "camera": "low courtside angle, tilting up with the jump",
+      "caption_overlay": "MATCH POINT 💥", "consistency_refs": [],
+      "seed": "424242", "model": "draft", "gen_mode": "keyframe", "chain_from": "3" },
+    { "id": 6, "duration_s": 5,
+      "video_prompt": "vertical 9:16 courtside smartphone footage, handheld with slight natural shake, bright indoor arena lighting, realistic authentic look, no watermarks, no on-screen text. The white shuttlecock lands ON the white back line of the green-mat indoor court, a tiny puff of dust; cut to the SAME red-jersey player (mid-20s, short black hair, bright RED sleeveless jersey, white shorts, ONE white sweatband on RIGHT wrist, YELLOW-grip racket) dropping his racket, both fists raised, roaring as the blurred crowd erupts behind him; he starts turning toward the court edge mid-celebration. Deafening crowd roar, single sharp whistle.",
+      "dialogue": "", "sfx": "crowd roar, whistle", "camera": "line-cam close-up then quick handheld push-in on player",
+      "caption_overlay": "ON. THE. LINE.", "consistency_refs": [],
+      "seed": "424242", "model": "draft", "gen_mode": "keyframe", "chain_from": "5" }
+  ],
+  "audio_plan": { "narration_voice": "MiniMax speech-2.5-turbo, Casual_Guy (learning-mode test voice; voice-sheet lock deferred until a real account exists)", "bgm_mood": "driving percussive sports beat, rising to a hit at the smash, no melody clutter" },
+  "metadata": {
+    "description": "The rally that would NOT die 🏸 wait for the line call... #badminton #rally #sports #satisfying #matchpoint",
+    "hashtags": ["#badminton", "#rally", "#sports", "#satisfying", "#matchpoint"],
+    "platform_toggles": { "made_for_kids": false, "ai_disclosure": true, "douyin_ai_shengming": false }
+  },
+  "estimated_cost_usd": 1.35,
+  "compliance_notes": "Original fictional players (no real-athlete likeness), original generated audio only, AI disclosure on. LEARNING MODE: stops at Step 6, no publishing. Cost math: 7x5s video x $0.0216/s = $0.76 + 6 kontext images (2 hook boundaries + 4 re-mints) x $0.04 = $0.24 + extract-frame ~$0.004 + TTS ~$0.015 + BGM ~$0.005 = $1.02; x1.3 retry buffer = $1.33 <= $2.50 cap."
+}

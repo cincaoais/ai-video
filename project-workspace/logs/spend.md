@@ -10,3 +10,7 @@
 
 Rules: one row per generation batch, same session. If a projection exceeds a cap,
 pause and ask BEFORE generating. New month = restart the running total (keep old rows).
+| 2026-07-29 | 2026-07-29-badminton-singles | 3× kontext t2i ($0.04 ea: boundary 1A, 1B attempt-1 FAILED landscape+safety-flag but billed, 1B retry OK) + 1× kontext i2i remint→2 | 0.16 | 1.10 |
+| 2026-07-29 | 2026-07-29-badminton-singles | 3× seedance fast 5s@720p (1A i2v, 1B i2v, 4 t2v-alias) + TTS 258ch + BGM 35s + 1× extract-frame | 0.33 | 1.43 |
+| 2026-07-29 | 2026-07-29-badminton-singles | chain cycles: shots 2+3 i2v ($0.104 ea) + 2× kontext remint (→3, →5) + 2× extract-frame | 0.29 | 1.72 |
+| 2026-07-29 | 2026-07-29-badminton-singles | final chain: shots 5+6 i2v ($0.104 ea) + 1× kontext remint (→6) + 1× extract-frame | 0.25 | 1.97 |

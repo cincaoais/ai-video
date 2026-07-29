@@ -1,0 +1,27 @@
+{
+  "project": "2026-07-29-badminton-singles",
+  "track": "tiktok",
+  "mode": "learning-local-only (no publish)",
+  "target_length_s": 30,
+  "episode_seed": "424242",
+  "created": "2026-07-29",
+  "estimated_cost_usd": 1.35,
+  "spent_usd": 0.0,
+  "shots": {
+    "1A": { "state": "generated", "gen_mode": "keyframe", "chain_from": null, "file": "shots/shot_1A.mp4", "boundary": "frames/boundary_1A.jpg", "last_frame_remint_for_2": "https://v3b.fal.media/files/b/0aa42cce/chjDq-k3SfUux2k59ddYd_af84af6bfba34e869d6d95a004931049.jpg" },
+    "1B": { "state": "generated", "gen_mode": "keyframe", "chain_from": null, "file": "shots/shot_1B.mp4", "boundary": "frames/boundary_1B.jpg", "note": "boundary retried 1x (landscape+safety false positive on attempt 1)" },
+    "2":  { "state": "generated", "gen_mode": "keyframe", "chain_from": "1A", "file": "shots/shot_2.mp4" },
+    "3":  { "state": "generated", "gen_mode": "keyframe", "chain_from": "2", "file": "shots/shot_3.mp4" },
+    "4":  { "state": "generated", "gen_mode": "t2v", "chain_from": null, "file": "shots/shot_4.mp4" },
+    "5":  { "state": "generated", "gen_mode": "keyframe", "chain_from": "3", "file": "shots/shot_5.mp4" },
+    "6":  { "state": "qc_pass", "gen_mode": "keyframe", "chain_from": "5", "file": "shots/shot_6.mp4" }
+  },
+  "audio": { "tts": "audio/narration.mp3 (19.8s, Casual_Guy)", "bgm": "audio/bgm.wav (35s CassetteAI)" },
+  "exports": {
+    "master-9x16-hookA": "master-9x16.mp4 (30.3s, QC douyin PASS exit 0)",
+    "hookB-variant": "master-9x16-hookB.mp4 (30.3s, QC douyin PASS exit 0)"
+  },
+  "spent_usd": 1.03,
+  "status": "REVIEW GATE — learning mode, publishing locked",
+  "drift_notes": "Identity held across 4 re-mints (face/jersey/build). Drift: blue arm band appeared by remint6 despite enumerated 'ONE white sweatband RIGHT wrist'; jersey grew sponsor-like graphics; shoe accents changed; court surface wandered green-mat<->wood mid-chain. Candidate learning: enumerate ENVIRONMENT anchors (floor type/color) as strictly as accessories in re-mint prompts."
+}
