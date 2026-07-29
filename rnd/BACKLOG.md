@@ -51,9 +51,18 @@ rnd/reports/2026-07-28-rnd-report.md §4 (K/C/L items, Cycle 2).
 - ⬜ **E2** TTS bake-off Kokoro vs MiniMax 2.8 HD (CN) / Kokoro vs ElevenLabs (EN) (<$1)
   — note 2026-07-28: MiniMax Speech-2.5 Turbo ($0.06/1k, EN+CN+Malay) now the pinned
   default; bake-off validates it vs alternatives
-- ⬜ **E3** End-to-end throwaway run, no publish (≤$2.50) — after Q1–Q3
-- ⬜ **E4** Keyframe-chain vs T2V bake-off: same storyboard both ways, compare drift (~$2;
-  fold into E3)
+- ✅ **E3** End-to-end throwaway run, no publish — 2026-07-29, $0.95 actual vs $1.11 est
+  (approved ~$2). Full pipeline validated: pricing pre-check → storyboard (hook A/B scored
+  74/63) → keyframe chain (t2i boundary → Seedance fast i2v 720p → server-side last-frame
+  extract → Kontext re-mint ×3) → TTS/BGM → ffmpeg assemble (ducking, -15.9 LUFS, burned
+  captions, -map_metadata 0) → qc_check.sh (douyin profile PASS exit 0; tiktok profile
+  duration-FAIL expected at 30s). Findings + fal-call table: rnd/reports/2026-07-29-e3-report.md
+- ✅ **E4** (folded into E3, 2026-07-29) Keyframe-chain vs T2V drift comparison: chained
+  shots held character identity over 3 re-mint generations (drift confined to accessories —
+  antenna morphed by gen 3; pin accessories explicitly in every re-mint prompt); the pure-t2v
+  shot with identical text produced a COMPLETELY different robot. Keyframe chaining confirmed
+  as the default for recurring characters. Evidence: output/2026-07-29-e3-throwaway/frames/
+  drift_contact_sheet.png. Full A/B same-storyboard bake-off no longer needed.
 - ⬜ **E5** Monthly Seedance 2.0 reference-to-video benchmark vs chained baseline
   (~$7.26/30s from monthly headroom, never per-video cap)
 
@@ -66,9 +75,9 @@ rnd/reports/2026-07-28-rnd-report.md §4 (K/C/L items, Cycle 2).
   Stage 8; auto write-back stays excluded regardless (human gate is policy).
 
 ## Blocked on user
-- fal dashboard cap check · RS Boost backend rates · 番茄达人 backend · Creative Center logged-in depth (report §2 ❓ list)
-- fal.ai account not yet created — the ONLY remaining blocker for Stage 4/5 and E3
-  (user signs up, loads ≤$50 credit no auto-top-up, adds MCP per MASTER-PLAN §2.2)
+- RS Boost backend rates · 番茄达人 backend · Creative Center logged-in depth (report §2 ❓ list)
+- ✅ fal.ai account created + MCP connected — verified 2026-07-29 during E3: $25 loaded,
+  no auto-top-up (recorded in research/config.md); pricing pre-check ran clean
 - ✅ ffmpeg installed — verified 2026-07-29: ffmpeg/ffprobe 8.1.2 on PATH in
   PowerShell AND Git Bash (winget Gyan.FFmpeg)
 - ✅ **W1** Verified 2026-07-29: `bash scripts/qc_check.sh` runs from this environment on

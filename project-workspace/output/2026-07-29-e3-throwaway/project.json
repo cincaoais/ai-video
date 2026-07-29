@@ -1,0 +1,52 @@
+{
+  "project": "2026-07-29-e3-throwaway",
+  "purpose": "E3 throwaway technical validation — DO NOT PUBLISH",
+  "track": "tiktok",
+  "created": "2026-07-29",
+  "episode_seed": 424242,
+  "budget": {
+    "approved_usd": 2.00,
+    "hard_stop_usd": 2.50,
+    "estimated_usd": 1.11,
+    "spent_usd": 0.95,
+    "note": "includes $0.104 wasted on one unfetchable t2v result (MCP path bug, resubmitted)"
+  },
+  "generation_plan": "hook A only (1B storyboard-scored at 63, not generated)",
+  "shots": {
+    "1A": { "status": "qc_pass", "gen_mode": "keyframe", "chain_from": null,
+            "boundary_image": "frames/boundary_1A.png", "clip": "shots/shot_1A.mp4",
+            "actual_res": "704x1248@24fps 5.04s silent",
+            "last_frame_raw": "frames/last_1A_fal.jpg (server-side fal-ai/ffmpeg-api/extract-frame)",
+            "last_frame_reminted": "frames/remint_for_2.png" },
+    "1B": { "status": "skipped_by_design", "gen_mode": "keyframe", "chain_from": null, "boundary_image": null, "clip": null },
+    "2":  { "status": "qc_pass", "gen_mode": "keyframe", "chain_from": "1A",
+            "boundary_image": "frames/remint_for_2.png", "clip": "shots/shot_2.mp4",
+            "last_frame_reminted": "frames/remint_for_3.png" },
+    "3":  { "status": "qc_pass", "gen_mode": "keyframe", "chain_from": "2",
+            "boundary_image": "frames/remint_for_3.png", "clip": "shots/shot_3.mp4",
+            "last_frame_reminted": "frames/remint_for_4.png" },
+    "4":  { "status": "qc_pass", "gen_mode": "keyframe", "chain_from": "3",
+            "boundary_image": "frames/remint_for_4.png", "clip": "shots/shot_4.mp4" },
+    "5":  { "status": "qc_pass", "gen_mode": "t2v", "chain_from": null, "clip": "shots/shot_5.mp4",
+            "note": "E4 comparison shot — character from text only; came out as a DIFFERENT robot (see frames/drift_contact_sheet.png)" },
+    "6":  { "status": "qc_pass", "gen_mode": "keyframe", "chain_from": null,
+            "boundary_image": "frames/boundary_6.png", "clip": "shots/shot_6.mp4" }
+  },
+  "audio": {
+    "tts": { "status": "generated", "file": "audio/narration.mp3", "duration_ms": 21636, "voice": "Casual_Guy (throwaway, voice-sheet NOT locked)" },
+    "bgm": { "status": "generated", "file": "audio/bgm.wav", "duration_s": 35 }
+  },
+  "assembly": {
+    "status": "complete",
+    "export": "master-9x16.mp4",
+    "details": "concat 6 clips (30.25s) + narration delayed 0.5s + BGM at 0.5 vol sidechain-ducked (ratio 12) + 2-pass loudnorm -> -15.9 LUFS (TP -1.4 dBTP limited further gain) + burned SRT captions (Arial Bold force_style) + -map_metadata 0 + explicit AIGC comment tag"
+  },
+  "qc": {
+    "status": "complete",
+    "results": {
+      "tiktok_profile": "exit 1 — FAIL duration 30.35s (<60.5s Creator-Rewards bound; 30s was the E3 design length, failure expected) + WARN draft resolution 704x1248",
+      "douyin_profile": "exit 0 PASS — WARN duration <45s, WARN draft resolution; aspect/audio/loudness/black-frame/metadata all pass"
+    }
+  },
+  "e4_drift_observation": "Chained shots 1A->2->3->4 held character identity (grey clay body, amber eyes, proportions) across 3 re-mint generations; visible drift limited to the antenna accessory (single red-bead wire -> two antler prongs by remint 3) and prop reinterpretation (coffee bean -> cookie-like by shot 3). Pure-t2v shot 5 produced a completely different robot design from the identical text description. Fresh t2i boundary (shot 6) recovered the red-bead antenna but shifted head shape. Conclusion: keyframe chaining is materially better than t2v for recurring characters; accessories are the weak point — pin them explicitly in every re-mint prompt."
+}

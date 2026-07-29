@@ -12,7 +12,7 @@
 - Creator Rewards eligible?: {YES/NO} → EN revenue model: {CRP | YT+Shop+clients}
 - CN payout path confirmed?: {own 实名 | partner | 机构 | drama_cps instead | SKIP}
 - drama_cps portal approved + tracking link tested in target geo: {YES/NO}
-- fal dashboard hard cap set: {$..}
+- fal dashboard hard cap set: $25 loaded, no auto-top-up (2026-07-29; E3 pre-check)
 - Warm-up week completed: TikTok {..} · Douyin {..} · YT {..}
 
 ## Generation models (pinned by R&D 2026-07-28 Cycle 2 — re-pin via /rnd, verify prices at pre-flight)
@@ -20,8 +20,9 @@
   finals; image-to-video variant bills the same ~$0.022/s — used by the keyframe workflow)
 - B-roll: `fal-ai/ltx-2/text-to-video/fast` (⚠ verify end-frame support at pre-flight;
   if absent, chaining B-roll needs `fal-ai/ltx-2.3` — same price)
-- Boundary/keyframe images + last-frame re-mints: FLUX Kontext pro tier (~$0.04/img —
-  confirm exact endpoint id + price via fal MCP `get_pricing`)
+- Boundary/keyframe images + last-frame re-mints: FLUX Kontext pro tier — CONFIRMED
+  2026-07-29 via fal `get_pricing`: `fal-ai/flux-pro/kontext` (image-to-image re-mints)
+  and `fal-ai/flux-pro/kontext/text-to-image` (first boundary frame), both $0.04/img
 - TTS (all tracks EN/CN/Malay): `fal-ai/minimax/preview/speech-2.5-turbo` ($0.06/1k chars);
   voice ids locked in assets/voice-sheet.md
 - BGM: `cassetteai/music-generator` (~$0.02/min; generative = license-safe cross-platform)
@@ -31,3 +32,8 @@
 - Opt-in premium (explicit approval only, breaks $2.50 cap): `bytedance/seedance-2.0/*`
 - Pre-flight step: query fal MCP `get_pricing` for every pinned tier above; if changed,
   update MASTER-PLAN §5 math
+- Prices verified 2026-07-29 (E3 pre-check, all match pins): Seedance v1 pro fast =
+  $1/M video tokens, tokens=(h×w×FPS×dur)/1024 → 720×1280@24fps ≈ $0.0216/s (i2v endpoint
+  `.../fast/image-to-video` exists, same token pricing); FLUX Kontext pro $0.04/img;
+  MiniMax speech-2.5-turbo $0.06/1k chars; cassetteai/music-generator $0.00125/compute-s
+  (30s sample renders in <2s compute → effectively <$0.01/track)

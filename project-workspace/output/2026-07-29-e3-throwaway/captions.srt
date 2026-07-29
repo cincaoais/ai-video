@@ -1,0 +1,23 @@
+1
+00:00:00,000 --> 00:00:05,000
+day 1: he wants to make coffee
+
+2
+00:00:05,042 --> 00:00:10,042
+step 1: secure the bean
+
+3
+00:00:10,083 --> 00:00:15,083
+leg day AND arm day
+
+4
+00:00:15,125 --> 00:00:20,125
+the pour. respect the pour.
+
+5
+00:00:20,167 --> 00:00:25,167
+delivery included
+
+6
+00:00:25,208 --> 00:00:30,208
+worth it. part 2?

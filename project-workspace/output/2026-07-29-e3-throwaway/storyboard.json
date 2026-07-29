@@ -1,0 +1,147 @@
+{
+  "project": "2026-07-29-e3-throwaway",
+  "purpose": "E3 technical validation — throwaway, NEVER publish. Preflight verdicts intentionally unfilled; Step-0 STOP waived by user for this run only (2026-07-29).",
+  "track": "tiktok",
+  "topic": "a tiny clay robot learns to make coffee",
+  "target_length_s": 30,
+  "episode_seed": 424242,
+  "character": {
+    "name": "Percolator Pete (throwaway)",
+    "description": "A tiny hand-sculpted clay robot, about 10cm tall: matte light-grey clay body with visible thumbprints, round amber LED eyes, stubby tube arms, short legs, and a thin copper-wire antenna topped with a red bead. Curious, eager, slightly clumsy.",
+    "reference_image": null,
+    "note": "No character sheet — first boundary frame IS the reference for this throwaway episode."
+  },
+  "style_block": "Stop-motion claymation style, tactile clay textures with visible thumbprints, tiny-scale kitchen props on a warm wooden countertop, soft morning window light, shallow depth of field, vertical 9:16 framing, subtle handheld jitter, cozy and playful, no watermarks, no text overlays baked into the image",
+  "title_options": [
+    "day 1 of my clay robot's barista arc",
+    "he's 10cm tall and he WILL make you coffee",
+    "teaching my tiny robot to make coffee (it went ok)"
+  ],
+  "hook_rationale": "Shot 1 opens mid-action: the robot yanks a French press plunger far bigger than himself and faceplants into a shower of bouncing coffee beans within the first 1.5s — physical fail + absurd scale is the pattern-interrupt; the caption frames a day-1 learning arc that promises a payoff.",
+  "hook_scores": {
+    "1A": { "score": 74, "reason": "Physical fail lands <1.5s (plunger yank -> bean rain), instantly readable stakes, strong quotable caption; loses points on practical value (pure entertainment)." },
+    "1B": { "score": 63, "reason": "Scale-contrast salute (tiny robot, paper hat, giant mug) is cute but the interrupt (slip into the mug) lands ~2.5s in; softer stakes, weaker quotability." }
+  },
+  "shots": [
+    {
+      "id": "1A",
+      "duration_s": 5,
+      "video_prompt": "Stop-motion claymation style, tactile clay textures with visible thumbprints, tiny-scale kitchen props on a warm wooden countertop, soft morning window light, shallow depth of field, vertical 9:16 framing, subtle handheld jitter, cozy and playful. A tiny hand-sculpted clay robot, about 10cm tall, matte light-grey clay body with visible thumbprints, round amber LED eyes, stubby tube arms, copper-wire antenna with a red bead, grips the plunger knob of a glass French press twice his height and yanks down with his whole body; the plunger gives way suddenly and he tumbles forward off the press as a scatter of roasted coffee beans rains and bounces around him on the counter. One continuous action. Camera: static close-up at countertop level, robot center-frame. Audio: soft clatter of beans on wood, a tiny squeaky 'wha-oa!', warm room tone.",
+      "dialogue": "",
+      "sfx": "bean clatter on wood, tiny squeak of surprise",
+      "camera": "static countertop-level close-up",
+      "caption_overlay": "day 1: he wants to make coffee",
+      "consistency_refs": ["@boundary_1A"],
+      "seed": 424242,
+      "model": "draft",
+      "gen_mode": "keyframe",
+      "chain_from": null
+    },
+    {
+      "id": "1B",
+      "duration_s": 5,
+      "video_prompt": "Stop-motion claymation style, tactile clay textures with visible thumbprints, tiny-scale kitchen props on a warm wooden countertop, soft morning window light, shallow depth of field, vertical 9:16 framing, subtle handheld jitter, cozy and playful. A tiny hand-sculpted clay robot, about 10cm tall, matte light-grey clay body with visible thumbprints, round amber LED eyes, stubby tube arms, copper-wire antenna with a red bead, wearing a tiny folded paper barista hat, stands at attention on a stack of two coasters beside a giant ceramic mug and gives a crisp salute; mid-salute the top coaster slides and he slips sideways, catching himself on the mug rim, hat askew. One continuous action. Camera: slow push-in from medium to close. Audio: little ceramic scrape, tiny determined 'hup!', warm room tone.",
+      "dialogue": "",
+      "sfx": "ceramic scrape, tiny grunt",
+      "camera": "slow push-in",
+      "caption_overlay": "he's been training his whole 3-day life",
+      "consistency_refs": ["@boundary_1B"],
+      "seed": 424242,
+      "model": "draft",
+      "gen_mode": "keyframe",
+      "chain_from": null,
+      "e3_note": "NOT GENERATED in E3 — hook scoring exercised at storyboard time only, per approved budget."
+    },
+    {
+      "id": "2",
+      "duration_s": 5,
+      "video_prompt": "Stop-motion claymation style, tactile clay textures with visible thumbprints, tiny-scale kitchen props on a warm wooden countertop, soft morning window light, shallow depth of field, vertical 9:16 framing, subtle handheld jitter, cozy and playful. A tiny hand-sculpted clay robot, about 10cm tall, matte light-grey clay body with visible thumbprints, round amber LED eyes, stubby tube arms, copper-wire antenna with a red bead, plants both hands on a single oversized roasted coffee bean and pushes it across the wooden counter like a boulder, leaning in with effort, toward a small red hand-crank coffee grinder in the background. One continuous action. Camera: static countertop-level tracking feel, grinder visible frame-right. Audio: soft scraping roll of the bean on wood, tiny effort grunts, warm room tone.",
+      "dialogue": "",
+      "sfx": "bean rolling scrape, tiny effort grunts",
+      "camera": "countertop level, grinder frame-right",
+      "caption_overlay": "step 1: secure the bean",
+      "consistency_refs": ["@remint_from_1A"],
+      "seed": 424242,
+      "model": "draft",
+      "gen_mode": "keyframe",
+      "chain_from": "1A"
+    },
+    {
+      "id": "3",
+      "duration_s": 5,
+      "video_prompt": "Stop-motion claymation style, tactile clay textures with visible thumbprints, tiny-scale kitchen props on a warm wooden countertop, soft morning window light, shallow depth of field, vertical 9:16 framing, subtle handheld jitter, cozy and playful. A tiny hand-sculpted clay robot, about 10cm tall, matte light-grey clay body with visible thumbprints, round amber LED eyes, stubby tube arms, copper-wire antenna with a red bead, hangs with both hands off the wooden crank handle of a small red hand-crank coffee grinder, using his whole body weight to pull the handle through one slow full rotation, legs kicking. One continuous action. Camera: static medium close-up, grinder center-frame. Audio: ratcheting grind crunch, tiny strained 'hnnng', warm room tone.",
+      "dialogue": "",
+      "sfx": "coffee grinder ratchet and crunch, tiny strain sound",
+      "camera": "static medium close-up on grinder",
+      "caption_overlay": "leg day AND arm day",
+      "consistency_refs": ["@remint_from_2"],
+      "seed": 424242,
+      "model": "draft",
+      "gen_mode": "keyframe",
+      "chain_from": "2"
+    },
+    {
+      "id": "4",
+      "duration_s": 5,
+      "video_prompt": "Stop-motion claymation style, tactile clay textures with visible thumbprints, tiny-scale kitchen props on a warm wooden countertop, soft morning window light, shallow depth of field, vertical 9:16 framing, subtle handheld jitter, cozy and playful. A tiny hand-sculpted clay robot, about 10cm tall, matte light-grey clay body with visible thumbprints, round amber LED eyes, stubby tube arms, copper-wire antenna with a red bead, braces against a dollhouse-sized copper kettle and tips it so a thin arc of steaming water pours into a small white ceramic pour-over cone sitting on a glass cup, a puff of steam rising. One continuous action. Camera: static close-up, pour arc center-frame, robot frame-left. Audio: gentle water trickle, soft steam hiss, warm room tone.",
+      "dialogue": "",
+      "sfx": "water trickle, steam hiss",
+      "camera": "static close-up on the pour",
+      "caption_overlay": "the pour. respect the pour.",
+      "consistency_refs": ["@remint_from_3"],
+      "seed": 424242,
+      "model": "draft",
+      "gen_mode": "keyframe",
+      "chain_from": "3"
+    },
+    {
+      "id": "5",
+      "duration_s": 5,
+      "video_prompt": "Stop-motion claymation style, tactile clay textures with visible thumbprints, tiny-scale kitchen props on a warm wooden countertop, soft morning window light, shallow depth of field, vertical 9:16 framing, subtle handheld jitter, cozy and playful. A tiny hand-sculpted clay robot, about 10cm tall, matte light-grey clay body with visible thumbprints, round amber LED eyes, stubby tube arms, copper-wire antenna with a red bead, pushes a full tiny espresso cup on a saucer across the wooden counter toward the camera, sliding it carefully with both arms, then pats the saucer twice, proud. One continuous action. Camera: low countertop dolly-in feel toward the cup. Audio: ceramic slide on wood, two soft pats, warm room tone.",
+      "dialogue": "",
+      "sfx": "ceramic sliding, two soft pats",
+      "camera": "low dolly-in toward cup",
+      "caption_overlay": "delivery included",
+      "consistency_refs": [],
+      "seed": 424242,
+      "model": "draft",
+      "gen_mode": "t2v",
+      "chain_from": null,
+      "e3_note": "E4 fold-in: deliberately pure text-to-video with the character described in text only — compare drift vs the chained shots 2-4."
+    },
+    {
+      "id": "6",
+      "duration_s": 5,
+      "video_prompt": "Stop-motion claymation style, tactile clay textures with visible thumbprints, tiny-scale kitchen props on a warm wooden countertop, soft morning window light, shallow depth of field, vertical 9:16 framing, subtle handheld jitter, cozy and playful. A tiny hand-sculpted clay robot, about 10cm tall, matte light-grey clay body with visible thumbprints, round amber LED eyes, stubby tube arms, copper-wire antenna with a red bead, sits on the rim of a giant ceramic mug with his short legs dangling, lifts a silver thimble like a cup with both hands, takes a tiny sip, then turns to the camera and gives a slow satisfied thumbs-up. One continuous action. Camera: static close-up, robot center on the mug rim. Audio: tiny satisfied 'ahh', warm room tone, soft clink of the thimble.",
+      "dialogue": "",
+      "sfx": "thimble clink, tiny satisfied sigh",
+      "camera": "static close-up on mug rim",
+      "caption_overlay": "worth it. part 2?",
+      "consistency_refs": ["@boundary_6"],
+      "seed": 424242,
+      "model": "draft",
+      "gen_mode": "keyframe",
+      "chain_from": null,
+      "e3_note": "Fresh (non-chained) boundary frame mid-video — tests keyframe restart consistency from text+style alone."
+    }
+  ],
+  "audio_plan": {
+    "narration_voice": "MiniMax speech-2.5-turbo voice_id Casual_Guy (voice-sheet unfilled — throwaway pick, NOT locked)",
+    "narration_text": "Day one: my tiny clay robot decided he's a barista now. Step one, secure the bean. Step two, grind — that is his entire body weight, respect. The pour? Honestly better than mine. And yes, delivery is included. Ten out of ten. Should he learn latte art next?",
+    "bgm_mood": "playful lo-fi kitchen jazz, light brushes and muted upright bass, cozy morning energy, no vocals"
+  },
+  "metadata": {
+    "description": "day 1 of teaching my tiny clay robot to make coffee #claymation #stopmotion #tinyrobot #coffee #aivideo",
+    "hashtags": ["#claymation", "#stopmotion", "#tinyrobot", "#coffeetok", "#aivideo"],
+    "platform_toggles": { "made_for_kids": false, "ai_disclosure": true, "douyin_ai_shengming": false }
+  },
+  "estimated_cost_usd": 1.11,
+  "cost_breakdown": {
+    "video_hookA_6x5s_at_0.0216_per_s_x1.3_retry": 0.84,
+    "boundary_images_2_t2i_plus_3_remints_at_0.04": 0.20,
+    "tts_minimax_260_chars_rounded_up": 0.06,
+    "bgm_cassetteai_35s": 0.01,
+    "hook_1B_if_generated_NOT_in_e3": 0.18
+  },
+  "compliance_notes": "Throwaway technical validation. NO PUBLISH under any circumstance. Original character, no copyrighted IP/music/likeness; generative BGM; AI disclosure toggles recorded for reference only since nothing ships."
+}
