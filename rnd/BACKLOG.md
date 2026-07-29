@@ -67,11 +67,12 @@ rnd/reports/2026-07-28-rnd-report.md §4 (K/C/L items, Cycle 2).
 
 ## Blocked on user
 - fal dashboard cap check · RS Boost backend rates · 番茄达人 backend · Creative Center logged-in depth (report §2 ❓ list)
-- ffmpeg not installed — blocks Stage 4/5 and E3 (Windows: `winget install Gyan.FFmpeg`)
-- ⬜ **W1** Verify on the Windows box that Cowork can actually invoke `scripts/qc_check.sh`
-  (bash). Test: run it in Git Bash with no args → expect the usage error, exit 2. If Cowork
-  can't call bash on Windows, the QC gate needs a PowerShell port or an ffmpeg MCP —
-  decide only after the test fails. Impact H / Effort L until proven otherwise.
+- fal.ai account not yet created — the ONLY remaining blocker for Stage 4/5 and E3
+  (user signs up, loads ≤$50 credit no auto-top-up, adds MCP per MASTER-PLAN §2.2)
+- ✅ ffmpeg installed — verified 2026-07-29: ffmpeg/ffprobe 8.1.2 on PATH in
+  PowerShell AND Git Bash (winget Gyan.FFmpeg)
+- ✅ **W1** Verified 2026-07-29: `bash scripts/qc_check.sh` runs from this environment on
+  the Windows box — no args → usage error, exit 2, as specified. No PowerShell port needed.
 
 ## Done
 - ✅ 2026-07-15 Cycle-1 full scan, verification, report, ledger, /rnd skill (commit 8cab310)
