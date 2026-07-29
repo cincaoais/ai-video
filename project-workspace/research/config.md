@@ -8,12 +8,19 @@
   {official channel used}
 - Output languages: EN / 中文
 
-## Pre-flight verdicts (from templates/preflight-checklist.md — fill before Phase 1)
-- Creator Rewards eligible?: {YES/NO} → EN revenue model: {CRP | YT+Shop+clients}
-- CN payout path confirmed?: {own 实名 | partner | 机构 | drama_cps instead | SKIP}
-- drama_cps portal approved + tracking link tested in target geo: {YES/NO}
+## Pre-flight verdicts (filled 2026-07-29 — LEARNING MODE: produce locally, publish nothing)
+- Creator Rewards eligible?: NO (physically in Malaysia; CRP not in SEA; no VPN ever)
+  → EN revenue model WHEN monetizing: YT YPP + TikTok Shop/affiliate + client work
+- CN payout path confirmed?: SKIP novel_cn (user has a Douyin account but no mainland
+  实名 → no wallet withdrawal path; revisit only via 机构/partner). CN-language work
+  routes to drama_cps when its portal is set up.
+- drama_cps portal approved + tracking link tested in target geo: NO — not yet signed up
 - fal dashboard hard cap set: $25 loaded, no auto-top-up (2026-07-29; E3 pre-check)
-- Warm-up week completed: TikTok {..} · Douyin {..} · YT {..}
+- Warm-up week completed: N/A — no social accounts yet by choice; REQUIRED (5–7 days 养号)
+  before any future first upload on any platform
+- ACTIVE MODE: learning/local-only. Default track `tiktok` (EN) — the only track with no
+  external dependencies. Production runs stop at Step 6 (review); Step 7 publish stays
+  locked until accounts exist + user re-opens this section.
 
 ## Generation models (pinned by R&D 2026-07-28 Cycle 2 — re-pin via /rnd, verify prices at pre-flight)
 - Drafts + finals: `fal-ai/bytedance/seedance/v1/pro/fast` (720p drafts → 1080p approved
