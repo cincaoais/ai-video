@@ -39,6 +39,12 @@ rnd/reports/2026-07-28-rnd-report.md §4 (K/C/L items, Cycle 2).
 - ⬜ **S3** Monthly long-form compilation workflow — Impact M / Effort M (not yet approved)
 - ⬜ **S4** Thumbnail/cover workflow per track — Impact M / Effort M (not yet approved)
 - ✅ **S5** drama_cps Mode-B-first on TikTok, Mode A → FB/YT — 2026-07-15 (approved: Q-D option 1)
+- ⬜ **S6** Decision-fingerprint learning loop (approved 2026-07-29, not yet built): every
+  video logs template version + hook pattern + caption style + active insight tags in
+  project.json/performance.md; Stage 8 correlates metrics vs fingerprints ACROSS videos
+  (patterns must hold over ≥5 samples); extend A/B discipline to one more variable at a
+  time (captions next). Human gate on template edits stays — attribution automated,
+  authority not. Impact H / Effort M. Needs S1 data flowing first (≥5 published videos).
 
 ## 🧪 Experiments (spend, within caps, log to spend.md — each needs explicit approval)
 - ⬜ **E1** Model bake-off Seedance v1 Pro Fast vs LTX-2 Fast vs Wan 2.5 (~$2)
@@ -53,6 +59,11 @@ rnd/reports/2026-07-28-rnd-report.md §4 (K/C/L items, Cycle 2).
 
 ## 🔁 Recurring (cadences live in rnd/ASSUMPTIONS.md)
 - fal pricing (30d) · TikTok CRP/RPM (30d) · CPS landscape+rates (30d) · 推文/红果 rates (30d) · YT policies (90d) · COPPA/labeling law (90d) · Upload-Post tiers (90d) · skills spec (180d)
+- ⏰ ~2027-01: re-evaluate HKUDS/OpenOPC "Self-Grown" mechanism (per-role outcome
+  attribution + auto write-back) — added 2026-07-29 when repo was 4 weeks old, README
+  claimed MIT but no license file. Check: issue tracker shows real multi-week learning
+  loops working (adopt ideas into S6), or demo-then-silence (drop). Relevant only to
+  Stage 8; auto write-back stays excluded regardless (human gate is policy).
 
 ## Blocked on user
 - fal dashboard cap check · RS Boost backend rates · 番茄达人 backend · Creative Center logged-in depth (report §2 ❓ list)
