@@ -1,0 +1,29 @@
+# Line-ending policy. This repo is authored on Windows, where Git's installer
+# sets core.autocrlf=true system-wide: blobs are stored LF, but every text file
+# is smudged to CRLF on checkout. That is invisible until it isn't — see below.
+
+# Everything text-like is stored LF in the repository.
+* text=auto
+
+# Shell scripts must be LF in the WORKING TREE too, not just in the blob.
+# A CRLF shebang makes the kernel look for an interpreter named "/bin/bash\r",
+# so `./qc_check.sh` dies with `bad interpreter: /bin/bash^M`. Running it as
+# `bash scripts/qc_check.sh` masks the problem; direct execution does not.
+*.sh text eol=lf
+
+# Docs and structured data: LF in the working tree as well. Without this,
+# `git diff` prints "LF will be replaced by CRLF the next time Git touches it"
+# for every one of these files — pure noise that hides real warnings.
+*.md   text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+
+# Git's own metadata files, so this file does not warn about itself.
+.gitattributes text eol=lf
+.gitignore     text eol=lf
+
+# Subtitles are deliberately NOT pinned to LF. They are tracked run evidence
+# (see .gitignore), SubRip conventionally uses CRLF, and `* text=auto` above
+# already stores them LF in the repo. Leave the working-tree form alone.
+
+*.png binary
