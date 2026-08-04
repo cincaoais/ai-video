@@ -14,7 +14,7 @@ Facts current as of 2026-07 R&D; re-verify thresholds in-app at signup.
       Know: CRP not in MY (skip); Shop full affiliate = 1k followers + MyKad/TIN
       (sub-1k "Program Affiliate Link" path exists); AI label mandatory.
       After: full profile → 养号 15–20 min/day real niche usage × 5–7 days BEFORE first upload.
-- [ ] 1.2 Google/YouTube — create channel. Purpose: realistic EN revenue from MY (YPP).
+- [x] 1.2 Google/YouTube — created 2026-08-02 (new Google account + channel). Purpose: realistic EN revenue from MY (YPP).
       Know: YPP = 1k subs + 4k watch-hrs/12mo OR 10M Shorts views/90d (Shorts feed
       time doesn't count toward watch-hrs); "altered/synthetic" disclosure on AI videos.
       After: channel art/handle, 2FA, niche warm-up.
